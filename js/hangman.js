@@ -4,6 +4,19 @@ let mistakes = 0;
 let guessed = [];
 let wordStatus = null;
 
+function checkIfGameWon() {
+    if (wordStatus === answer) {
+      document.getElementById('keyboard').innerHTML = 'Nyertél! A megfejtés a kód.';
+    }
+  }
+  
+  function checkIfGameLost() {
+    if (mistakes === maxWrong) {
+      document.getElementById('startbtn').style.visibility="visible";
+      document.getElementById('keyboard').innerHTML = 'Vesztettél.';
+    }
+}
+
 function reset() {
     document.getElementById('startbtn').style.visibility="hidden";
     mistakes = 0;
@@ -13,6 +26,6 @@ function reset() {
     guessedWord();
     updateMistakes();
     generateButtons();
-  }
+}
   
-  document.getElementById('maxWrong').innerHTML = maxWrong;
+document.getElementById('maxWrong').innerHTML = maxWrong;
