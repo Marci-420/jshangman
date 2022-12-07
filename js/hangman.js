@@ -21,6 +21,10 @@ function checkIfGameLost() {
     }
 }
 
+function updateMistakes() {
+    document.getElementById('mistakes').innerHTML = mistakes;
+}
+
 function reset() {
     document.getElementById('startbtn').style.visibility="hidden";
     mistakes = 0;
