@@ -8,9 +8,9 @@ function checkIfGameWon() {
     if (wordStatus === answer) {
       document.getElementById('keyboard').innerHTML = 'Nyertél! A megfejtés a kód.';
     }
-  }
+}
   
-  function checkIfGameLost() {
+function checkIfGameLost() {
     if (mistakes === maxWrong) {
       document.getElementById('startbtn').style.visibility="visible";
       document.getElementById('keyboard').innerHTML = 'Vesztettél.';
