@@ -9,7 +9,11 @@ function checkIfGameWon() {
       document.getElementById('keyboard').innerHTML = 'Nyertél! A megfejtés a kód.';
     }
 }
-  
+
+function updateHangmanPicture() {
+    document.getElementById('hangmanPic').src = './images/' + mistakes + '.jpg';
+}
+
 function checkIfGameLost() {
     if (mistakes === maxWrong) {
       document.getElementById('startbtn').style.visibility="visible";
